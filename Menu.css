@@ -1,0 +1,862 @@
+/* =====================================================
+   ROOT VARIABLES & RESET
+===================================================== */
+:root {
+    --primary-color: #D97706;
+    --primary-dark: #b45309;
+    --accent-gold: #EAAB00;
+    --dark-color: #121212;
+    --dark-brown: #1a110b;
+    --cream-bg: #F9F8F3;
+    --page-bg: #F5F3ED;
+    --text-muted: #777;
+    --text-light: #aaa;
+    --card-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
+    --transition: 0.3s ease;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--page-bg);
+    overflow-x: hidden;
+    color: #1a1a1a;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* =====================================================
+    UTILITIES
+===================================================== */
+.section-padding {
+    padding: 80px 0;
+}
+
+.section-title h2 {
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.section-title span,
+.text-accent {
+    color: var(--primary-color);
+}
+
+.section-title p {
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 50px;
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+.btn-order {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 26px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background var(--transition), transform var(--transition);
+}
+
+.btn-order:hover {
+    background: var(--primary-dark);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+.navbar {
+    margin-bottom: 100px;
+
+    padding: 15px 0;
+    transition: background 0.4s ease, padding 0.4s ease;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+
+    color: var(--primary-color) !important;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    padding: 6px 12px !important;
+    transition: color var(--transition);
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--primary-color) !important;
+}
+
+/* Collapsed mobile menu styling */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background: rgba(18, 18, 18, 0.97);
+        padding: 16px 20px;
+        border-radius: 12px;
+        margin-top: 10px;
+    }
+
+    .navbar-nav .nav-item {
+        padding: 4px 0;
+    }
+
+    .navbar-nav .btn-order {
+        margin-top: 8px;
+    }
+}
+
+
+
+
+/* الهيكل الموزع بالتساوي 3 أعمدة */
+.app-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    gap: 20px;
+}
+
+/* =====================================================
+    1. SIDEBAR (يسار)
+===================================================== */
+.sidebar {
+    width: 250px;
+    min-width: 250px;
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--coffee-dark);
+    margin-bottom: 35px;
+    padding-left: 10px;
+}
+
+
+
+.nav-item.active {
+    background-color: var(--bg-light);
+    color: var(--coffee-dark);
+    font-weight: 600;
+}
+
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    padding: 12px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.logout-btn:hover {
+    color: #DE3B3B;
+}
+
+/* =====================================================
+    2. MAIN CONTENT (المنتصف)
+===================================================== */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+    /* المنتجات فقط هي اللي بتعمل سكرول */
+    padding-right: 8px;
+}
+
+/* البحث والفلتر الدائري */
+.search-bar-container {
+    display: flex;
+    gap: 16px;
+}
+
+.search-input-wrapper {
+    position: relative;
+    flex: 1;
+}
+
+.search-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-light);
+}
+
+.search-input {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #ECEAE6;
+    padding: 14px 14px 14px 50px;
+    border-radius: 30px;
+    outline: none;
+    font-size: 14px;
+}
+
+.filter-btn {
+    background: var(--coffee-dark);
+    color: #ffffff;
+    border: none;
+    padding: 0 28px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* تبويبات الأقسام الدائرية الناعمة */
+.tabs-container {
+    margin-top: 50px;
+    display: flex;
+    gap: 12px;
+}
+
+.tab-btn {
+    background: #ffffff;
+    border: 1px solid #ECEAE6;
+    padding: 10px 28px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--coffee-muted);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.tab-btn.active {
+    color: #D97706;
+    border-color: var(--coffee-muted);
+}
+
+.menu-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--coffee-dark);
+    margin-top: 5px;
+}
+
+/* الجريد الموزع بنظام الـ 3 كروت المتناسقة */
+/* المنتجات فقط هي اللي بتعمل سكرول */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+
+    /* تمديد الـ grid ليأخذ أقصى ارتفاع لصفين فقط (حوالي كارتين + الـ gap) */
+    max-height: 580px; 
+    
+    /* تفعيل السكرول الرأسي عند ظهور صف ثالث */
+    overflow-y: auto;
+    
+    /* إخفاء السكرول الأفقي */
+    overflow-x: hidden;
+    
+    /* بادينج خفيف جهة اليمين لترك مساحة مريحة لشريط التمرير */
+    padding-right: 8px;
+}
+
+/* تحسين شكل شريط التمرير الخاص بالمنتجات ليكون متناسقاً وأنيقاً */
+.products-grid::-webkit-scrollbar {
+    width: 6px;
+}
+
+.products-grid::-webkit-scrollbar-track {
+    background: #f5f3ed; /* نفس لون خلفية الصفحة لديك */
+    border-radius: 10px;
+}
+
+.products-grid::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+.products-grid::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color); /* يضيء بلون البراند عند الوقوف عليه */
+}
+
+.product-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #ECEAE6;
+}
+
+.product-info {
+    display: flex;
+    gap: 14px;
+}
+
+.product-img {
+    width: 60px;
+    height: 60px;
+    background: var(--bg-light);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    flex-shrink: 0;
+}
+
+.product-text h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--coffee-dark);
+    margin-bottom: 4px;
+}
+
+.product-text p {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.4;
+}
+
+.product-controls {
+    margin-top: 10px;
+}
+
+.control-row {
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+/* الكنترول الداخلي للكمية والمقاس */
+.qty-selector,
+.size-selector {
+    margin-bottom: 15px;
+
+    display: flex;
+    background: var(--bg-light);
+    border: 1px solid #ECEAE6;
+    border-radius: 15px;
+}
+
+.qty-selector {
+    color: black;
+    align-items: center;
+    font-size: 12px;
+    padding: 4px 10px;
+    gap: 8px;
+    color: var(--text-light);
+}
+
+.qty-selector span {
+        color: black;
+
+    /* color: var(--coffee-dark); */
+    font-weight: 600;
+}
+
+.qty-selector button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--coffee-muted);
+    font-weight: bold;
+    padding: 0 4px;
+}
+
+.size-btn {
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.size-btn.active {
+    background: #ffffff;
+    color: var(--coffee-dark);
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.add-to-cart-btn {
+    background-color: black;
+    width: 100%;
+    color: #ffffff;
+    border: none;
+    padding: 11px;
+    border-radius: 14px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* =====================================================
+    3. CART PANEL (يمين)
+===================================================== */
+/* =====================================================
+    3. CART PANEL (يمين)
+===================================================== */
+.cart-panel {
+    /* جرب هذه القيمة لتبدأ السلة مع أول كارت منتج بالضبط */
+    margin-top: 105px; 
+
+    width: 330px;
+    min-width: 330px;
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    height: max-content; 
+    align-self: start; 
+}
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background: #E8E4DF;
+    color: var(--coffee-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.user-info h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--coffee-dark);
+}
+
+.user-info p {
+    font-size: 11px;
+    color: var(--text-light);
+}
+
+.options-btn {
+    margin-left: auto;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.divider {
+    border: 0;
+    border-top: 1px solid #F0EFEF;
+    margin: 12px 0;
+}
+
+.cart-header h3 {
+
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.order-type-tabs {
+    display: flex;
+    background: var(--bg-light);
+    padding: 4px;
+    border-radius: 14px;
+    gap: 4px;
+}
+
+.type-btn {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-light);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.type-btn.active {
+    color: black;
+    font-weight: 600;
+}
+/* الحاوية الخارجية التي تحتوي على قائمة عناصر السلة */
+.cart-items-list {
+    max-height: 340px;    /* الارتفاع المثالي الذي يسمح بظهور 3 عناصر بالضبط */
+    overflow-y: auto;     /* إظهار السكرول بار الرأسي فقط عند تخطي 3 عناصر */
+    overflow-x: hidden;    /* منع أي سكرول أفقي */
+    padding-right: 4px;   /* مساحة صغيرة على اليمين عشان السكرول ميتداخلش مع الكلام */
+}
+
+/* تنسيق كارت العنصر الواحد داخل السلة */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 10px 12px;   /* تقليل الـ padding الرأسي قليلاً لجعل الكارت متناسق */
+    margin-bottom: 10px;  /* المسافة بين كل كارت والتاني */
+    height: 100px;        /* تثبيت ارتفاع الكارت الواحد لضمان الحسابات الدقيقة المساحية */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+}
+
+/* تخصيص شكل شريط السكرول (Scrollbar) ليصبح أنيق ورفيع ولا يخرب التصميم */
+.cart-items-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.cart-items-list::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+.cart-items-list::-webkit-scrollbar-thumb {
+    background: #A39895; /* لون متناسق مع درجات الكافيه */
+    border-radius: 10px;
+}
+
+.cart-items-list::-webkit-scrollbar-thumb:hover {
+    background: #D97706; 
+}
+
+.item-details {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.item-icon {
+    font-size: 22px;
+}
+
+.item-meta .size-label {
+    font-size: 10px;
+    color: #9C522B;
+    font-weight: 600;
+}
+
+.item-meta h5 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--coffee-dark);
+}
+
+.item-meta .price-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #9C522B;
+}
+
+.item-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    color: #D1C7C5;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.mini-qty {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #ffffff;
+    border: 1px solid #ECEAE6;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+}
+
+.mini-qty button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--coffee-muted);
+}
+
+.coupon-container {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg-light);
+    border: 1px solid #ECEAE6;
+    padding: 10px 14px;
+    border-radius: 14px;
+}
+
+.coupon-code {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--coffee-dark);
+}
+
+.coupon-badge {
+    background: var(--coffee-dark);
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 8px;
+}
+
+/* فواتير الحساب وزر الـ checkout الدائري من الصورة */
+.invoice-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: var(--text-light);
+    margin-bottom: 8px;
+}
+
+.invoice-row .font-bold {
+    color: var(--coffee-dark);
+    font-weight: 600;
+}
+
+.total-row {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--coffee-dark);
+    margin: 14px 0;
+}
+
+.checkout-btn {
+    width: 100%;
+background-color: #D97706;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    border-radius: 18px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+/* التنسيق العادي للروابط */
+.nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    padding: 6px 12px !important;
+    transition: color var(--transition);
+}
+
+/* التنسيق عند الوقوف بالماوس أو عندما يكون الرابط نشطاً */
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.active { /* إضافة الـ .nav-link.active هنا */
+    color: var(--primary-color) !important;
+    font-weight: 600; /* اختياريا: جعل الخط أسمك قليلاً للتميز */
+}
+
+
+/* =============================================
+   تعديلات الموبايل (Responsive Fix)
+============================================= */
+/* =====================================================
+   RESPONSIVE MEDIA QUERIES (للشاشات المختلفة والموبايل)
+===================================================== */
+
+/* 1. الشاشات الكبيرة جداً (جعل هيكل الـ 3 أعمدة مرتاح) */
+@media (min-width: 1200px) {
+    .app-container {
+        padding: 0 40px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
+
+/* 2. شاشات اللاب توب المتوسطة والتابلت الكبير (أقل من 1200px) */
+@media (max-width: 1199.98px) {
+    .sidebar {
+        width: 220px;
+        min-width: 220px;
+        padding: 20px 15px;
+    }
+    
+    .cart-panel {
+        width: 290px;
+        min-width: 290px;
+        padding: 16px;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+/* 3. شاشات التابلت العادي (أقل من 991px) */
+@media (max-width: 991.98px) {
+    /* الـ Navbar العلوية تاخذ مساحة أقل لعدم دفع المحتوى لأسفل */
+    .navbar {
+        margin-bottom: 30px;
+    }
+
+    /* تحويل الهيكل من أفقي إلى رأسي بالكامل */
+    .app-container {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 15px;
+    }
+
+    /* إخفاء السايد بار الجانبي لأن الـ Navbar العلوية حلت محله وتكفي */
+    .sidebar {
+        display: none; 
+    }
+
+    /* المحتوى الرئيسي يأخذ العرض بالكامل */
+    .main-content {
+        width: 100%;
+        overflow-y: visible; /* إلغاء السكرول الداخلي المنفصل على التابلت */
+        padding-right: 0;
+    }
+
+    /* السلة تأخذ العرض الكامل وتظهر أسفل المنتجات بشكل مريح */
+    .cart-panel {
+        width: 100%;
+        min-width: 100%;
+        margin-top: 20px;
+        box-shadow: var(--card-shadow);
+    }
+}
+
+/* 4. شاشات الموبايل (أقل من 576px) */
+@media (max-width: 575.98px) {
+    .section-padding {
+        padding: 40px 0;
+    }
+
+    /* ضبط أزرار البحث والفلتر لتصبح فوق بعضها في الشاشات الضيقة جداً */
+    .search-bar-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .filter-btn {
+        justify-content: center;
+        padding: 12px 0;
+        width: 100%;
+    }
+
+    /* جعل تبويبات الأقسام (Coffee, Snack) قابلة للتمرير الأفقي لو زادت */
+    .tabs-container {
+        margin-top: 25px;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 8px;
+    }
+    
+    .tab-btn {
+        padding: 8px 20px;
+        font-size: 13px;
+        flex-shrink: 0; /* منع انكماش الأزرار */
+    }
+
+    /* كروت المنتجات تملأ الشاشة بالكامل لكارت واحد أو اثنين متجاورين حسب الحجم */
+    .products-grid {
+        grid-template-columns: 1fr; /* كارت واحد عريض ومريح جداً للقراءة على الموبايل */
+        gap: 12px;
+    }
+
+    .product-card {
+        padding: 16px;
+    }
+
+    .product-info {
+        gap: 10px;
+    }
+
+    .product-img {
+        width: 50px;
+        height: 50px;
+        font-size: 40px;
+    }
+
+    .product-text h3 {
+        font-size: 15px;
+    }
+
+    .product-text p {
+        font-size: 12px;
+    }
+
+    /* السلة على الموبايل */
+    .cart-panel {
+        padding: 16px;
+    }
+
+    .cart-items-list {
+        max-height: 280px; /* تقليل الارتفاع الافتراضي قليلاً ليناسب شاشات الموبايل القصيرة */
+    }
+
+    .cart-item {
+        height: 90px; /* تقليص مرن لكارت السلة */
+        padding: 8px;
+    }
+
+    .item-icon {
+        font-size: 18px;
+    }
+
+    .item-meta h5 {
+        font-size: 12px;
+    }
+}

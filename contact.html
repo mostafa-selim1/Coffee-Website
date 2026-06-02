@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand | Premium Coffee</title>
+  <link rel="icon" type="image/svg+xml" href="imgs/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,800&family=Poppins:wght@300;400;500;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation">
+        <div class="container fix">
+            <a class="navbar-brand" href="#">Brand</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link active-page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active-page" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link active-page" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="contact-page-container">
+        <div class="contact-header-section">
+            <h2>تواصل <span>معنا</span></h2>
+            <p>لديك استفسار عن منتجاتنا نحن هنا لمساعدتك</p>
+        </div>
+
+        <div class="contact-content-wrapper">
+            
+            <div class="contact-info-card">
+                <h3>معلومات الاتصال</h3>
+                <p class="info-subtitle">يسعدنا دائماً تواصلك معنا خلال أوقات العمل الرسمية.</p>
+
+                <div class="info-links-list">
+                    <div class="info-item">
+                        <div class="info-icon-box"><i class="fas fa-phone-alt"></i></div>
+                        <div class="info-text-box">
+                            <span>اتصل بنا مباشرة</span>
+                            <a href="tel:+201000000000">+20 100 000 0000</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon-box"><i class="fab fa-whatsapp"></i></div>
+                        <div class="info-text-box">
+                            <span>طلب سريع عبر واتساب</span>
+                            <a href="https://wa.me/201000000000" target="_blank">ارسل رسالة واتساب</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon-box"><i class="fas fa-envelope"></i></div>
+                        <div class="info-text-box">
+                            <span>البريد الإلكتروني</span>
+                            <a href="mailto:info@brand.com">info@brand.com</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon-box"><i class="fas fa-clock"></i></div>
+                        <div class="info-text-box">
+                            <span>أوقات العمل</span>
+                            <p>يومياً: من 10:00 صباحاً حتى 11:00 مساءً</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-box">
+                    <span>تابعنا على منصاتنا:</span>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-card">
+                <form action="#" class="main-contact-form">
+                    <div class="form-row-two">
+                        <div class="form-group">
+                            <label for="username">الاسم بالكامل</label>
+                            <input type="text" id="username" placeholder="اكتب اسمك هنا" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف</label>
+                            <input type="tel" id="phone" placeholder="رقم الموبايل" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني (اختياري)</label>
+                        <input type="email" id="email" placeholder="example@mail.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">نوع الاستفسار</label>
+                        <select id="subject">
+                            <option value="general">استفسار عام</option>
+                            <option value="custom-cake">طلب كيكة مناسبات مخصصة</option>
+                            <option value="complaint">شكوى أو اقتراح</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">رسالتك</label>
+                        <textarea id="message" rows="5" placeholder="اكتب تفاصيل رسالتك أو طلبك هنا..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-contact-btn">إرسال الرسالة</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>

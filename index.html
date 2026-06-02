@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- العنوان الذي سيظهر في الرسالة بدلاً من اللينك -->
+  <title>Coffee Shop </title>
+
+  <!-- أكواد Meta Tags الخاصة بمواقع التواصل (Open Graph) -->
+  <meta property="og:title" content="Coffee Shop">
+  <meta property="og:image" content="https://mostafa-selim1.github.io/Coffee-Website/favicon.png">
+  <!-- ضع رابط صورة لوجو موقعك هنا -->
+  <meta property="og:url" content="https://mostafa-selim1.github.io/Coffee-Website/">
+  <meta property="og:type" content="website">
+
+
+  <link rel="icon" type="image/svg+xml" href="imgs/favicon.png">
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Fonts: load both Poppins and Playfair Display in one request -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,800&family=Poppins:wght@300;400;500;600;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand" href="#">Brand</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item">
+            <a class="nav-link active-page" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active-page" href="menu.html">Menu</a>
+          </li>
+          <li class="nav-item">
+
+
+
+
+          <li class="nav-item">
+            <a class="nav-link active-page" href="contact.html">Contact</a>
+          </li>
+
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" aria-label="Hero section">
+    <img src="imgs/postar.jpg" alt="Premium coffee background" class="hero-bg-img">
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
+        <span class="sub-title">Premium Craft Coffee</span>
+        <h1>Wake Up Your<br><span>Sensations</span></h1>
+        <p>We source the finest beans from sustainable farms to bring you a cup of coffee that isn't just a drink, but
+          an experience.</p>
+        <div class="d-flex gap-3 flex-wrap">
+          <a href="#" id="menuBtn" class="btn-order text-decoration-none" role="button">Explore Menu</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BRAND DIFFERENCE ===================== -->
+  <section class="section-padding" aria-labelledby="features-heading">
+    <div class="container">
+      <div class="section-title text-center" data-aos="fade-up">
+        <h2 id="features-heading">The <span>Brand</span> Difference</h2>
+        <p>High-quality beans, expert roasting, and a passion for the perfect pour.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="custom-card h-100">
+            <div class="card-img-wrapper">
+              <img src="imgs/photo-1447933601403-0c6688de566e.jpg" alt="Premium coffee beans" loading="lazy">
+            </div>
+            <div class="card-body-custom">
+              <h4>Premium Beans</h4>
+              <p>Directly sourced organic beans roasted to perfection in small batches.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="custom-card h-100">
+            <div class="card-img-wrapper">
+              <img src="imgs/brooke-cagle-X4RJG4aNi8o-unsplash.jpg" alt="Expert barista at work" loading="lazy">
+            </div>
+            <div class="card-body-custom">
+              <h4>Expert Baristas</h4>
+              <p>Our team consists of certified coffee lovers who master the art of brewing.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="custom-card h-100">
+            <div class="card-img-wrapper">
+              <img src="imgs/photo-1554118811-1e0d58224f24.jpg" alt="Cozy coffee shop space" loading="lazy">
+            </div>
+            <div class="card-body-custom">
+              <h4>Cozy Space</h4>
+              <p>A minimalist atmosphere designed for productivity and relaxation.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+          <div class="custom-card h-100">
+            <div class="card-img-wrapper">
+              <img src="imgs/photo-1511920170033-f8396924c348.jpg" alt="Fast coffee service" loading="lazy">
+            </div>
+            <div class="card-body-custom">
+              <h4>Fast Service</h4>
+              <p>We value your time. Get your caffeine fix quickly without quality loss.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT RITUAL ===================== -->
+  <section class="about-ritual section-padding" aria-labelledby="ritual-heading">
+    <div class="container text-center" data-aos="fade-up">
+      <span class="brand-accent">Brand</span>
+      <h2 class="ritual-title" id="ritual-heading">
+        We believe coffee is more than a drink — it's a ritual.
+        We <span class="text-accent">source premium beans</span>,
+        roast in small batches, &amp; deliver
+      </h2>
+      <p class="ritual-desc">
+        Every cup tells a story — from the high-altitude farms where our beans grow to the careful roasting
+        process that brings out each origin's unique character.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== POPULAR FLAVORS ===================== -->
+  <section class="flavors section-padding" aria-labelledby="flavors-heading">
+    <div class="container">
+      <div class="section-title text-center" data-aos="fade-up">
+        <h2 id="flavors-heading">Popular <span>Flavors</span></h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-6 col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+          <div class="flavor-card">
+            <div class="img-box">
+              <img src="imgs/coffee2.png" alt="Caramel Latte" loading="lazy">
+              <span class="price" aria-label="Price">75.0 EGP</span>
+            </div>
+            <div class="content">
+              <h4>Caramel Latte</h4>
+              <p>Rich espresso blended with creamy caramel and steamed milk.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+          <div class="flavor-card">
+            <div class="img-box">
+              <img src="imgs/coffee1.png" alt="Cold Brew Delight" loading="lazy">
+              <span class="price" aria-label="Price">80.0 EGP</span>
+            </div>
+            <div class="content">
+              <h4>Cold Brew Delight</h4>
+              <p>Smooth cold-brewed coffee with a hint of vanilla and cream.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+          <div class="flavor-card">
+            <div class="img-box">
+              <img src="imgs/coffee3.png" alt="Mocha Fusion" loading="lazy">
+              <span class="price" aria-label="Price">100.0 EGP</span>
+            </div>
+            <div class="content">
+              <h4>Macchiato</h4>
+              <p>A Macchiato is made with frothed milk, caramel sauce and espresso.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+          <div class="flavor-card">
+            <div class="img-box">
+              <img src="imgs/coffee1.png" alt="Cold Brew Delight" loading="lazy">
+              <span class="price" aria-label="Price">90.0 EGP</span>
+            </div>
+            <div class="content">
+              <h4>Cold Brew Delight</h4>
+              <p>Smooth cold-brewed coffee with a hint of vanilla and cream.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== JOIN COMMUNITY ===================== -->
+  <section class="join-community" aria-labelledby="community-heading">
+    <div class="container-fluid p-0">
+      <div class="row g-0 align-items-center">
+        <div class="col-lg-6 community-text-side text-white" data-aos="fade-right">
+          <h2 class="display-5 fw-bold mb-4" id="community-heading">Join Our Community <br class="d-none d-md-block"> of
+            Coffee Lovers</h2>
+          <p class="mb-4 opacity-75">
+            Subscribe today and get 20% off your first order. Experience the difference of freshly roasted,
+            premium coffee delivered to your door.
+            <br><br>
+            Plus, enjoy exclusive access to limited-edition blends and early product launches.
+          </p>
+          <div class="row mt-4 g-4">
+            <div class="col-sm-6 feature-item">
+              <h5 class="fw-bold text-accent"><i class="fa-solid fa-check me-2" aria-hidden="true"></i> Premium Quality
+              </h5>
+              <p class="small opacity-75">Hand-selected beans from the world's finest coffee-growing regions.</p>
+            </div>
+            <div class="col-sm-6 feature-item">
+              <h5 class="fw-bold text-accent"><i class="fa-solid fa-check me-2" aria-hidden="true"></i> Expert Roasting
+              </h5>
+              <p class="small opacity-75">Each batch is carefully roasted to bring out its unique flavor profile.</p>
+            </div>
+            <div class="col-sm-6 feature-item">
+              <h5 class="fw-bold text-accent"><i class="fa-solid fa-check me-2" aria-hidden="true"></i> Sustainability
+              </h5>
+              <p class="small opacity-75">We partner with eco-friendly farms committed to sustainable practices.</p>
+            </div>
+            <div class="col-sm-6 feature-item">
+              <h5 class="fw-bold text-accent"><i class="fa-solid fa-check me-2" aria-hidden="true"></i> Fresh Always
+              </h5>
+              <p class="small opacity-75">Roasted to order and delivered within days for peak freshness.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="img-wrapper-right">
+            <img src="imgs/cup-coffee-splash-effect-beans-260nw-1384175045.jpg" class="main-coffee-img img-fluid"
+              alt="Coffee splash with beans" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section class="testimonials section-padding">
+    <div class="container">
+      <div class="section-title text-center mb-5" data-aos="fade-up">
+        <h2 class="ritual-title">It's our customers <br> who love us</h2>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="100">
+          <div class="testi-card">
+            <div class="card-top d-flex justify-content-between">
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <button class="toggle-btn" onclick="toggleRating(this)">
+                <i class="fas fa-chevron-down"></i>
+              </button>
+            </div>
+
+            <div class="rating-details">
+              <p class="review-text">"I've tried coffee from all over the city, and this place stands out. My favorite
+                is the caramel latte — it's smooth and heavenly."</p>
+            </div>
+
+
+            <div class="user-info">
+              <img src="imgs/user1.jpg" alt="Mostafa S." class="user-img">
+              <span class="user-name">— Mostafa S.</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="100">
+          <div class="testi-card">
+            <div class="card-top d-flex justify-content-between">
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <button class="toggle-btn" onclick="toggleRating(this)">
+                <i class="fas fa-chevron-down"></i>
+              </button>
+            </div>
+
+            <div class="rating-details">
+              <p class="review-text">"I've tried coffee from all over the city, and this place stands out. My favorite
+                is the caramel latte — it's smooth and heavenly."</p>
+            </div>
+
+            <div class="user-info">
+              <img src="imgs/user2.jpg" alt="Ahmed." class="user-img">
+              <span class="user-name">Ahmed.</span>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="100">
+          <div class="testi-card">
+            <div class="card-top d-flex justify-content-between">
+              <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <button class="toggle-btn" onclick="toggleRating(this)">
+                <i class="fas fa-chevron-down"></i>
+              </button>
+            </div>
+
+            <div class="rating-details">
+              <p class="review-text">"That's Good"</p>
+            </div>
+
+            <div class="user-info">
+              <img src="imgs/user3.jpg" alt="Sara." class="user-img">
+              <span class="user-name">Sara.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GALLERY ===================== -->
+  <section class="gallery-section" aria-labelledby="gallery-heading">
+    <div class="container py-5">
+      <h2 class="text-center fw-bold mb-5 gallery-title" id="gallery-heading">Our Gallery</h2>
+      <div class="row g-2 justify-content-center flex-nowrap">
+        <div class="col-4">
+          <div class="gallery-img-box">
+            <img src="imgs/drew-coffman-jUOaONoXJQk-unsplash.jpg" class="img-fluid" alt="Barista crafting coffee"
+              loading="lazy">
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="gallery-img-box">
+            <img src="imgs/photo-1447933601403-0c6688de566e.jpg" class="img-fluid"
+              alt="Close-up of premium coffee beans" loading="lazy">
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="gallery-img-box">
+            <img src="imgs/tabitha-turner-KWZ-rg9o76A-unsplash.jpg" class="img-fluid" alt="Cozy coffee shop interior"
+              loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="join-cta" aria-labelledby="cta-heading">
+    <div class="container text-center py-5" data-aos="fade-up">
+      <h2 class="cta-title" id="cta-heading">Join our community <br><span>of coffee lovers</span></h2>
+      <a href="#" class="btn-join text-decoration-none mt-4 d-inline-block" role="button">Join Us</a>
+    </div>
+
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer-section" aria-label="Footer">
+
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6 col-md-6">
+          <h3 class="footer-brand">Brand</h3>
+          <p class="brand-desc">
+            Crafting exceptional coffee experiences since 2009. From bean to cup, we're passionate about
+            delivering the finest artisan coffee to your door.
+          </p>
+          <div class="social-icons d-flex gap-2">
+            <a href="https://wa.me/201012455315" target="_blank" rel="noopener noreferrer" class="social-link"
+              aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100007073730955" target="_blank" rel="noopener noreferrer"
+              class="social-link" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/mostafa-selim-96556a387/" target="_blank" rel="noopener noreferrer"
+              class="social-link" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-4">
+          <ul class="footer-links" aria-label="Company links">
+            <li><a href="#" class="footer-heading-link">Company</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-4">
+          <ul class="footer-links" aria-label="Product links">
+            <li><a href="#" class="footer-heading-link">Products</a></li>
+            <li><a href="#">Coffee Beans</a></li>
+            <li><a href="#">Subscriptions</a></li>
+            <li><a href="#">Gift Cards</a></li>
+            <li><a href="#">Merchandise</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-4">
+          <ul class="footer-links" aria-label="Support links">
+            <li><a href="#" class="footer-heading-link">Support</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+
+      <div class="footer-bottom text-center">
+        <p class="text-white-50 mb-0 footer-copy">
+          &copy; 2026 Designed and developed by Mostafa Selim as a demonstration project to showcase web development
+          skills.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== LIGHTBOX ===================== -->
+  <div class="image-lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="close-lightbox" id="closeLightbox" aria-label="Close image viewer">&times;</button>
+    <img id="lightboxImg" src="" alt="Enlarged view">
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
